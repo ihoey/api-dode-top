@@ -50,5 +50,5 @@ app.use(router.routes()) // 添加路由中间件
 app.use(router.allowedMethods()) // 对请求进行一些限制处理
 
 app.listen(3000, () => {
-  console.log('[demo] route-use-middleware is starting at port 3000')
+  console.log('route-use-middleware is starting at port 3000')
 })
