@@ -1,0 +1,27 @@
+{
+  "apps": [{
+    "name": "iotp",
+    "script": "index.js",
+    "env": {
+      "COMMON_VARIABLE": "true"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+  }],
+  "deploy": {
+    "production": {
+      "user": "root",
+      "host": "118.24.72.231",
+      "ref": "origin/master",
+      "repo": "git@github.com:ihoey/api-dode-top.git",
+      "path": "/data/www/iotp",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "post-deploy": "pm2 startOrRestart ecosystem.json --env production",
+      "pre-deploy-local": "echo 'Deploy Done!'",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
