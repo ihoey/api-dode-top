@@ -24,7 +24,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:ihoey/api-dode-top.git',
       path: '/data/www/iotp',
-      'post-deploy': 'yarn && pm2 reload ecosystem.config.js --env production'
+      'post-deploy': 'npm i && pm2 reload ecosystem.config.js --env production'
     }
   }
 };
