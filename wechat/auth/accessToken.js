@@ -17,8 +17,9 @@ const getAccessToken = async () => {
       accessTokenJson.access_token = data.access_token
       accessTokenJson.expires_time = new Date().getTime() + (parseInt(data.expires_in) - 200) * 1000
       //更新本地存储的
-      fs.writeFile('../access_token.json', JSON.stringify(accessTokenJson), () => {
-        console.log('文件已更新')
+      fs.writeFile(`${process.env.PWD}/wechat/access_token.json`, JSON.stringify(accessTokenJson), (err) => {
+        if (!err) console.log('文件已更新')
+        else console.log(err)
       })
       //将获取后的 access_token 返回
       return accessTokenJson.access_token
