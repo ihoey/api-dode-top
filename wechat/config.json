@@ -1,0 +1,10 @@
+{
+  "token": "ihoey",
+  "appID": "wx901b8891fcc0f0af",
+  "appScrect": "b84bfb069cf5b3f389c0d7dcf0ae6b65",
+  "apiDomain": "https://api.weixin.qq.com/",
+  "apiURL": {
+    "accessTokenApi": "%scgi-bin/token?grant_type=client_credential&appid=%s&secret=%s",
+    "sendMessageApi": "%scgi-bin/message/custom/send?access_token=%s"
+  }
+}
